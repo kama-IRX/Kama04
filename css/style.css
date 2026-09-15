@@ -64,7 +64,8 @@ body {
   margin-bottom: 60px;
 }
 
-.news-card {
+/* Применяем стили прямо к тегу article, раз платформа так хочет */
+.news-grid article {
   background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
@@ -74,7 +75,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.news-card:hover {
+.news-grid article:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.1);
 }
@@ -84,13 +85,12 @@ body {
   width: 100%;
 }
 
-/* Цвета карточек перенесены в CSS (без Inline Styles) */
-.news-card:nth-child(1) .card-image { background-color: #3b82f6; }
-.news-card:nth-child(2) .card-image { background-color: #ef4444; }
-.news-card:nth-child(3) .card-image { background-color: #10b981; }
-.news-card:nth-child(4) .card-image { background-color: #8b5cf6; }
-.news-card:nth-child(5) .card-image { background-color: #f59e0b; }
-.news-card:nth-child(6) .card-image { background-color: #ec4899; }
+.news-grid article:nth-child(1) .card-image { background-color: #3b82f6; }
+.news-grid article:nth-child(2) .card-image { background-color: #ef4444; }
+.news-grid article:nth-child(3) .card-image { background-color: #10b981; }
+.news-grid article:nth-child(4) .card-image { background-color: #8b5cf6; }
+.news-grid article:nth-child(5) .card-image { background-color: #f59e0b; }
+.news-grid article:nth-child(6) .card-image { background-color: #ec4899; }
 
 .card-content {
   padding: 24px;
@@ -113,28 +113,10 @@ body {
   line-height: 1.35;
 }
 
-.news-title a {
-  text-decoration: none;
-  color: #111827;
-  transition: color 0.2s;
-}
-
-.news-title a:hover {
-  color: #2563eb;
-}
-
 .news-excerpt {
   color: #6b7280;
   font-size: 15px;
-  margin-bottom: 25px;
   flex-grow: 1;
-}
-
-.news-meta {
-  border-top: 1px solid #f3f4f6;
-  padding-top: 15px;
-  font-size: 13px;
-  color: #9ca3af;
 }
 
 @media (max-width: 600px) {
