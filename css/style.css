@@ -17,7 +17,6 @@ body {
   padding: 0 20px;
 }
 
-/* Шапка */
 .portal-header {
   display: flex;
   justify-content: space-between;
@@ -58,7 +57,6 @@ body {
   font-weight: 700;
 }
 
-/* Магия CSS Grid */
 .news-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -66,7 +64,6 @@ body {
   margin-bottom: 60px;
 }
 
-/* Стили карточек */
 .news-card {
   background: #ffffff;
   border-radius: 12px;
@@ -77,7 +74,6 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Тот самый интерактив из брифа */
 .news-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.1);
@@ -88,11 +84,19 @@ body {
   width: 100%;
 }
 
+/* Цвета карточек перенесены в CSS (без Inline Styles) */
+.news-card:nth-child(1) .card-image { background-color: #3b82f6; }
+.news-card:nth-child(2) .card-image { background-color: #ef4444; }
+.news-card:nth-child(3) .card-image { background-color: #10b981; }
+.news-card:nth-child(4) .card-image { background-color: #8b5cf6; }
+.news-card:nth-child(5) .card-image { background-color: #f59e0b; }
+.news-card:nth-child(6) .card-image { background-color: #ec4899; }
+
 .card-content {
   padding: 24px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Растягивает контент, чтобы прижать футер */
+  flex-grow: 1;
 }
 
 .news-category {
@@ -123,7 +127,7 @@ body {
   color: #6b7280;
   font-size: 15px;
   margin-bottom: 25px;
-  flex-grow: 1; /* Забирает всё свободное пространство */
+  flex-grow: 1;
 }
 
 .news-meta {
@@ -133,7 +137,6 @@ body {
   color: #9ca3af;
 }
 
-/* Адаптив для маленьких экранов */
 @media (max-width: 600px) {
   .portal-header {
     flex-direction: column;
